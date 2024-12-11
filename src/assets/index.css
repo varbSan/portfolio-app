@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --primary: 240 4.8% 50%; /* Silver (medium gray) */
+    --primary-foreground: 0 0% 10%; /* Dark text for contrast */
+    --secondary: 240 4.8% 90%; /* Light silver for subtle areas */
+    --secondary-foreground: 240 4.8% 30%; /* Deeper silver for text contrast */
+    --accent: 240 4.8% 85%; /* Muted silver with a slight tint for accents */
+    --accent-foreground: 240 4.8% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.8% 60%; /* Silver highlight */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 240 4.8% 50%; /* Silver */
+    --primary-foreground: 0 0% 98%; /* Light text for dark backgrounds */
+    --secondary: 240 4.8% 25%; /* Deeper silver for dark mode secondary */
+    --secondary-foreground: 240 4.8% 85%; /* Light silver for text */
+    --accent: 240 4.8% 20%; /* Muted silver for accents in dark mode */
+    --accent-foreground: 240 4.8% 85%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.8% 60%; /* Silver highlight */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply dark bg-background text-foreground;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('https://static.vecteezy.com/system/resources/previews/012/979/472/non_2x/modern-high-resolution-black-geometric-background-with-polygonal-grid-abstract-black-metallic-hexagonal-pattern-simple-illustration-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
