@@ -91,7 +91,6 @@ const projects: Project[] = [
     ] as TechKey[]).includes(tech.key)),
   },
 ]
-
 </script>
 
 <template>
@@ -119,9 +118,8 @@ const projects: Project[] = [
           </div>
         </CardDescription>
       </CardHeader>
-      <CardContent
-      >
-        <div class="overflow-hidden h-64 border-white/80 rounded border">
+      <CardContent>
+        <div class="h-64 overflow-hidden rounded border border-white/80">
           <a href="https://example.com" target="_blank">
             <img
               src="https://solytic.com/wp-content/uploads/2021/03/Solytic-Monitoring-site-1.png"
