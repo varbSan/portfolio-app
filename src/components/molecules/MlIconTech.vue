@@ -3,7 +3,7 @@ import type { Tech } from '@/lib/techStack'
 import { Card } from '@/components/ui/card'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
-type Props = Tech & { size?: 'sm' | 'md' | 'lg' }
+type Props = Tech & { size?: 'xs' | 'sm' | 'md' | 'lg' }
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
 })
@@ -15,6 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
       <TooltipTrigger
         class="transition-all duration-75 ease-in-out hover:rotate-6"
         :class="{
+          'mr-1.5 mt-1.5': props.size === 'xs',
           'mr-2 mt-2': props.size === 'sm',
           'mr-4 mt-4': props.size === 'md',
           'mr-5 mt-5': props.size === 'lg',
@@ -34,6 +35,7 @@ const props = withDefaults(defineProps<Props>(), {
               :is="props.icon"
               class="w-full"
               :class="{
+                'h-4': props.size === 'xs',
                 'h-6': props.size === 'sm',
                 'h-12': props.size === 'md',
                 'h-14': props.size === 'lg',

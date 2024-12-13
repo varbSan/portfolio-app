@@ -4,7 +4,6 @@ import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
 import MlIconTech from '@/components/molecules/MlIconTech.vue'
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -19,32 +18,47 @@ type Project = {
   techStack: Tech[]
 }
 const projects: Project[] = [
+  // {
+  //   key: 'bobottle',
+  //   title: 'Bobottle',
+  //   description: 'An Uber like app for recycling. Give away your empty bottle. Help someone who will make money from it.',
+  //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
+  //   techStack: techStack.filter((tech) => {
+  //     const keys: TechKey[] = [
+  //       'typescript',
+  //       'rust',
+  //       'tauri',
+  //       'tailwind',
+  //       'vuejs',
+  //       'vite',
+  //       'graphql',
+  //       'actix',
+  //       'postgresql',
+  //       'github',
+  //       'railway',
+  //     ]
+  //     return keys.includes(tech.key)
+  //   }),
+  // },
   {
-    key: 'bobottle',
-    title: 'Bobottle',
-    description: 'The Uber of recycling. Give away your empty bottle. Help someone who will make money from it.',
+    key: 'tradecitizen',
+    title: 'Trade Citizen',
+    description: 'A minimal and live trade monitoring tool.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-    techStack: techStack.filter((tech) => {
-      const keys: TechKey[] = [
-        'typescript',
-        'rust',
-        'tauri',
-        'tailwind',
-        'vuejs',
-        'vite',
-        'graphql',
-        'actix',
-        'postgresql',
-        'github',
-        'railway',
-      ]
-      return keys.includes(tech.key)
-    }),
+    techStack: techStack.filter(tech => ([
+      'typescript',
+      'rust',
+      'tauri',
+      'tailwind',
+      'vuejs',
+      'vite',
+      'github',
+    ] as TechKey[]).includes(tech.key)),
   },
   {
     key: 'berghail',
     title: 'Berghail',
-    description: 'The game about Techno, g-heads, and Anja',
+    description: 'A 2D game about Techno, g-heads, and Anja.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -62,7 +76,7 @@ const projects: Project[] = [
   {
     key: 'jestin',
     title: 'Jestin',
-    description: 'The learning tool for process heavy jobs. Empower your employees with space repetition and active recall so they know what they have to do by heart.',
+    description: 'A learning tool for process heavy jobs. Empower your employees with space repetition and active recall so they know what they have to do by heart.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -84,7 +98,7 @@ const projects: Project[] = [
   {
     key: 'ochess',
     title: 'oChess',
-    description: 'The chess app, but fast',
+    description: 'A chess app.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -104,24 +118,9 @@ const projects: Project[] = [
     }),
   },
   {
-    key: 'tradecitizen',
-    title: 'Trade Citizen',
-    description: 'The minimal and fast trade monitoring tool.',
-    imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-    techStack: techStack.filter(tech => ([
-      'typescript',
-      'rust',
-      'tauri',
-      'tailwind',
-      'vuejs',
-      'vite',
-      'github',
-    ] as TechKey[]).includes(tech.key)),
-  },
-  {
     key: 'diamonds',
     title: 'Diamonds',
-    description: 'The mobile app to remind yourself what inspirations. Enter ',
+    description: 'A mobile app to remind yourself your inspirations. Insert your quotes and mantras. Get one a day with an AI generated matching background.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -149,21 +148,20 @@ const projects: Project[] = [
     <Card
       v-for="project in projects"
       :key="project.key"
-      class="col-span-2 w-full lg:col-span-1"
+      class="col-span-2 flex size-full flex-col justify-between lg:col-span-1"
     >
       <CardHeader>
         <CardTitle> {{ project.title }} </CardTitle>
-        <CardDescription>
-          <div class="mb-2">
-            <p class="text-sm">
-              {{ project.description }}
-            </p>
-
-          </div>
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div class="h-64 overflow-hidden rounded border border-white/80">
+        <div class="flex">
+          <MlIconTech
+            v-for="tech in project.techStack"
+            v-bind="tech"
+            :key="tech.key"
+            class="flex w-full"
+            size="xs"
+          />
+        </div>
+        <div class="mb-2 h-64 overflow-hidden rounded border  border-white/80">
           <a href="https://example.com" target="_blank">
             <img
               :src="project.imageSrc"
@@ -172,14 +170,12 @@ const projects: Project[] = [
             >
           </a>
         </div>
-        <MlIconTech
-              v-for="tech in project.techStack"
-              v-bind="tech"
-              :key="tech.key"
-              class="flex w-full"
-              size="sm"
-            />
-      </CardContent>
+        <CardDescription>
+          <p class="text-sm">
+            {{ project.description }}
+          </p>
+        </CardDescription>
+      </CardHeader>
     </Card>
   </section>
 </template>
