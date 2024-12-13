@@ -150,7 +150,7 @@ const projects: Project[] = [
       :key="project.key"
       class="col-span-2 flex size-full flex-col justify-between lg:col-span-1"
     >
-      <CardHeader>
+      <CardHeader class="antialiased">
         <CardTitle> {{ project.title }} </CardTitle>
         <div class="flex">
           <MlIconTech
@@ -161,7 +161,7 @@ const projects: Project[] = [
             size="xs"
           />
         </div>
-        <div class="mb-2 h-64 overflow-hidden rounded border  border-white/80">
+        <div class="mb-1 h-64 overflow-hidden rounded border border-white/80">
           <a href="https://example.com" target="_blank">
             <img
               :src="project.imageSrc"
@@ -171,7 +171,7 @@ const projects: Project[] = [
           </a>
         </div>
         <CardDescription>
-          <p class="text-sm">
+          <p class="text-sm text-white/60 antialiased">
             {{ project.description }}
           </p>
         </CardDescription>
