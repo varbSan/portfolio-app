@@ -9,6 +9,9 @@ import Dialog from '@/components/ui/dialog/Dialog.vue'
 import DialogContent from '@/components/ui/dialog/DialogContent.vue'
 import DialogTrigger from '@/components/ui/dialog/DialogTrigger.vue'
 import { Calendar, MessageCircleMore } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 function showCalendly() {
   const script = document.createElement('script')
@@ -39,7 +42,7 @@ const faqItems: AccordionItem[] = [
 
   <AtPageTitle>
     <template #default>
-      Fullstack Developer
+      {{ t('Fullstack Developer') }}
     </template>
   </AtPageTitle>
 

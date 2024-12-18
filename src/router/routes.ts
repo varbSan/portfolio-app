@@ -10,7 +10,7 @@ export const routeKeys = {
   experiences: 'Experiences',
   projects: 'Projects',
   information: 'Information',
-  about: 'About'
+  about: 'About',
 } as const
 
 export const routes: RouteRecordRaw[] = [
