@@ -5,10 +5,18 @@ import PgHome from '@/pages/PgHome.vue'
 import PgInformation from '@/pages/PgInformation.vue'
 import PgProjects from '@/pages/PgProjects.vue'
 
+export const routeKeys = {
+  home: 'Home',
+  experiences: 'Experiences',
+  projects: 'Projects',
+  information: 'Information',
+  about: 'About'
+} as const
+
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'Home',
+    name: routeKeys.home,
     component: PgHome,
     meta: {
       label: 'Home', // translate
@@ -16,7 +24,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '/experiences',
-    name: 'Experiences',
+    name: routeKeys.experiences,
     component: PgExperiences,
     meta: {
       label: 'Experiences', // translate
@@ -24,15 +32,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '/projects',
-    name: 'Projects',
-    component: PgProjects,
-    meta: {
-      label: 'Projects', // translate
-    },
-  },
-  {
-    path: '/projects',
-    name: 'Projects',
+    name: routeKeys.projects,
     component: PgProjects,
     meta: {
       label: 'Projects', // translate
@@ -40,7 +40,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '/information',
-    name: 'Information',
+    name: routeKeys.information,
     component: PgInformation,
     meta: {
       label: 'Information', // translate
@@ -48,7 +48,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: '/about',
-    name: 'About',
+    name: routeKeys.about,
     component: PgAbout,
     meta: {
       label: 'About', // translate

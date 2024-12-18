@@ -43,7 +43,7 @@ const projects: Project[] = [
   {
     key: 'tradecitizen',
     title: 'Trade Citizen',
-    description: 'A minimal and live trade monitoring tool.',
+    description: 'A live and minimal monitoring tool to follow the stock market.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter(tech => ([
       'typescript',
