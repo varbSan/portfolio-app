@@ -4,7 +4,9 @@ import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import MlIconTech from '@/components/molecules/MlIconTech.vue'
 import { techStack } from '@/lib/techStack'
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 export type Experience = {
   id: string
   title: string
@@ -20,7 +22,7 @@ export type Experience = {
 const props = defineProps<Experience>()
 
 const experienceTechStack = computed(() => props.techStack
-  .map(techName => techStack.find(tech => tech.key === techName))
+  .map(techName => techStack.find(tech => tech.name === techName))
   .filter(tech => !!tech),
 )
 </script>
@@ -48,18 +50,18 @@ const experienceTechStack = computed(() => props.techStack
       <p class="text-sm">
         {{ props.description }}
       </p>
-      <MlIconTech
-        v-for="tech in experienceTechStack"
-        v-bind="tech"
-        :key="tech.key"
-        class="flex w-full"
-        size="sm"
-      />
     </div>
     <img
       :src="props.imageLink"
       :alt="props.imageAlt"
       class="h-96 w-full rounded-md object-cover object-left-top"
     >
+    <MlIconTech
+      v-for="tech in experienceTechStack"
+      v-bind="tech"
+      :key="tech.name"
+      class="flex w-full"
+      size="sm"
+    />
   </div>
 </template>

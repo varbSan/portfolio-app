@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Briefcase, Home, Info, Pickaxe, User } from 'lucide-vue-next'
-import { computed } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const currentRoute = useRoute()
 const router = useRouter()
-const currentRouteName = computed(() => currentRoute.name?.toString())
+const currentRouteName = ref(currentRoute.name?.toString())
+watchEffect(() => {
+  currentRouteName.value = currentRoute.name?.toString()
+})
 
 const routes = computed(() => router.getRoutes().map(route => ({
   name: route.name?.toString() as string,
@@ -30,7 +33,7 @@ function getIcon(routeName?: string) {
   <Tabs
     v-model="currentRouteName"
     :default-value="routes[0].name"
-    class="sticky flex w-72 justify-center"
+    class="sticky flex w-64 justify-center"
   >
     <TabsList class="flex w-[90%] justify-between rounded-full border border-white/80 bg-zinc-950 transition-all duration-200 ease-in-out hover:w-full">
       <RouterLink

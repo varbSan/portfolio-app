@@ -1,31 +1,35 @@
 <script setup lang="ts">
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import TmExperience, { type Experience } from './TmExperience.vue'
 
-const experiences: Experience[] = [
+const { t } = useI18n()
+
+const experiences = computed<Experience[]>(() => [
   {
     id: 'codio-fullstack',
-    title: 'Fullstack Developer',
+    title: t('Fullstack Developer'),
     companyLink: 'https://www.codioimpact.com/',
     companyName: 'Codio Impact GmbH',
     timeframe: '2022 - 2025',
     imageLink: 'https://cdn.prod.website-files.com/60e6f7d2de5acab2f159928a/64e7782b9edbd01439aef6d1_Management%20dashboard%20-%2020.svg',
     imageAlt: 'Codio Impact webapp admin dashboard',
-    description: 'Build the front and the backend a sustainability platform. Features: AI queries, Multiple Workspaces, Nested Datapoints (3 levels), Nested Projects, User Delegation, External data entry, Custom datatables.',
+    description: t('Build the front and the backend a sustainability platform. Features: AI queries, Multiple Workspaces, Nested Datapoints (3 levels), Nested Projects, User Delegation, External data entry, Custom datatables.'),
     techStack: ['typescript', 'tailwind', 'vuejs', 'vite', 'graphql', 'nestjs', 'mongodb', 'docker', 'vercel', 'render', 'github'],
   },
   {
     id: 'solytic-frontend',
-    title: 'Frontend Developer',
+    title: t('Frontend Developer'),
     companyLink: 'https://solytic.com/',
     companyName: 'Solytic GmbH',
     timeframe: '2021 - 2022',
     imageLink: 'https://solytic.com/wp-content/uploads/2021/03/Solytic-Monitoring-site-1.png',
     imageAlt: 'Solytic webapp dashboard',
-    description: 'Build the Frontend of a Solar Panel Monitoring SaaS',
+    description: t('Build the Frontend of a Solar Panel Monitoring SaaS'),
     techStack: ['typescript', 'sass', 'vuejs', 'cypress', 'webpack', 'graphql', 'microsoftazure'],
   },
-]
+])
 </script>
 
 <template>
