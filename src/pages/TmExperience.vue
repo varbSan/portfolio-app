@@ -4,9 +4,7 @@ import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import MlIconTech from '@/components/molecules/MlIconTech.vue'
 import { techStack } from '@/lib/techStack'
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
 export type Experience = {
   id: string
   title: string
@@ -18,7 +16,6 @@ export type Experience = {
   imageLink: string
   imageAlt: string
 }
-
 const props = defineProps<Experience>()
 
 const experienceTechStack = computed(() => props.techStack

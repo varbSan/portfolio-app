@@ -52,7 +52,7 @@ const currentTechStack = techStack.filter(tech => ([
   </section>
   <section class="mt-6 grid w-full grid-cols-12 gap-4 px-6 text-white/60 antialiased md:w-2/3">
     <AtPageSubTitle class="col-span-12">
-      {{ t('Social Media') }} 
+      {{ t('Social Media') }}
     </AtPageSubTitle>
     <MlContacts show-label />
   </section>

@@ -1,5 +1,26 @@
 {
   "All rights reserved": "Tout droit réservé",
   "Fullstack Developer": "Développeur Fullstack",
-  "Who I am": "Qui je suis"
+  "Who I am": "Qui je suis",
+  "Frontend Developer": "Développeur Frontend",
+  "Product driven at core, <br> I'm always eager to hear about your project <br> and find out in what way I can help you make it a reality.<br><br> Let's work, and ship a great product together!": "Product driven at core, <br> I'm always eager to hear about your project <br> and find out in what way I can help you make it a reality.<br><br> Let's work, and ship a great product together!",
+  "🚀 What service do you offer?": "🚀 What service do you offer?",
+  "I build your mobile/desktop/web application (e.g., startup product, company internal tool, personal hobby app). Consulting and working on your existing project is also an option if your tech stack matches mine.": "I build your mobile/desktop/web application (e.g., startup product, company internal tool, personal hobby app). Consulting and working on your existing project is also an option if your tech stack matches mine.",
+  "💰 How much does a custom project cost?": "💰 How much does a custom project cost?",
+  "The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. Nonetheless, I can already tell you that I will only commit to your project if I evaluates its magnitude to 3750€ or higher.": "The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. Nonetheless, I can already tell you that I will only commit to your project if I evaluates its magnitude to 3750€ or higher.",
+  "💸 What is your daily rate?": "💸 What is your daily rate?",
+  "If you need me to work on an existing project of yours I usually charge 750€ per day.": "If you need me to work on an existing project of yours I usually charge 750€ per day.",
+  "💳 How does payment work for a project?": "💳 How does payment work for a project?",
+  "I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc.": "I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc.",
+  "⏳ How long does a project take?": "⏳ How long does a project take?",
+  "It's difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.": "It's difficult",
+  "🏷️ Do you offer discounts?": "🏷️ Do you offer discounts?",
+  "I offer a 10% discount for non-profit organizations.": "I offer a 10% discount for non-profit organizations.",
+  "Build the front and the backend a sustainability platform. Features: AI queries, Multiple Workspaces, Nested Datapoints (3 levels), Nested Projects, User Delegation, External data entry, Custom datatables.": "Build the front and the backend a sustainability platform. Features: AI queries, Multiple Workspaces, Nested Datapoints (3 levels), Nested Projects, User Delegation, External data entry, Custom datatables.",
+  "Build the Frontend of a Solar Panel Monitoring SaaS": "Build the Frontend of a Solar Panel Monitoring SaaS",
+  "A live and minimal monitoring tool to follow the stock market.": "A live and minimal monitoring tool to follow the stock market.",
+  "A 2D game about the Girl, Techno, and G-heads.": "A 2D game about the Girl, Techno, and G-heads.",
+  "A learning tool for process heavy jobs. Empower your employees with space repetition and active recall so they know what they have to do by heart.": "A learning tool for process heavy jobs. Empower your employees with space repetition and active recall so they know what they have to do by heart.",
+  "A chess app.": "A chess app.",
+  "A mobile app to remind yourself your inspirations. Insert your quotes and mantras. Get one a day with an AI generated matching background.": "A mobile app to remind yourself your inspirations. Insert your quotes and mantras. Get one a day with an AI generated matching background."
 }

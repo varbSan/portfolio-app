@@ -30,7 +30,7 @@ const faqItems: AccordionItem[] = [
   { value: 'faq-item-2', title: t('💰 How much does a custom project cost?'), content: t('The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. Nonetheless, I can already tell you that I will only commit to your project if I evaluates its magnitude to 3750€ or higher.') },
   { value: 'faq-item-3', title: t('💸 What is your daily rate?'), content: t('If you need me to work on an existing project of yours I usually charge 750€ per day.') },
   { value: 'faq-item-4', title: t('💳 How does payment work for a project?'), content: t('I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc.') },
-  { value: 'faq-item-5', title: t('⏳ How long does a project take?'), content: t("It's difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.") },
+  { value: 'faq-item-5', title: t('⏳ How long does a project take?'), content: t('It\'s difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.') },
   { value: 'faq-item-6', title: t('🏷️ Do you offer discounts?'), content: t('I offer a 10% discount for non-profit organizations.') },
 ]
 </script>
