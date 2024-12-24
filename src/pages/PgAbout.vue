@@ -25,18 +25,18 @@ const currentTechStack = techStack.filter(tech => ([
 
 <template>
   <AtPageTitle />
-  <section class="mt-6 grid   w-full gap-4 px-6 text-white/60 antialiased md:w-2/3 lg:grid-cols-3">
+  <section class="mt-6 grid  w-full gap-4 px-6 text-white/60 antialiased md:w-2/3 lg:grid-cols-3">
     <AtPageSubTitle class="col-span-3">
       {{ t('Who I am') }}
     </AtPageSubTitle>
     <img
       src="@/assets/profile_picture.jpg"
-      class="col-span-1 aspect-square w-full overflow-hidden rounded border border-white/80 object-cover"
+      class="col-span-3 sm:col-span-1 aspect-square w-full overflow-hidden rounded border border-white/80 object-cover"
       alt="Avatar"
     >
     <p
-      class="col-span-2"
-      v-html="('Fullstack Developer based in Berlin, Germany<br>I enjoy blending technology and innovative ideas to create unique, bespoke application that exceed my clients expectations.<br><br>Whether collaborating with teams or leading a projects, my attention to detail and dedication to excellence have earned me a reputation for delivering exceptional results.<br><br>Even when I\'m not working for my clients, I\'m always looking for new things to learn and experiment with. I continue to develop my design and development skills by working on personal projects.<br>')"
+      class="col-span-3 sm:col-span-2"
+      v-html="t('Fullstack Developer based in Berlin, Germany<br>I enjoy blending technology and innovative ideas to create unique, bespoke application that exceed my clients expectations.<br><br>Whether collaborating with teams or leading a projects, my attention to detail and dedication to excellence have earned me a reputation for delivering exceptional results.<br><br>Even when I\'m not working for my clients, I\'m always looking for new things to learn and experiment with. I continue to develop my design and development skills by working on personal projects.<br>')"
     />
   </section>
   <section class="mt-6 gap-4 px-6 text-white/60 antialiased md:w-2/3">
