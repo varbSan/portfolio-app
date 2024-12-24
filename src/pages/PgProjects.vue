@@ -80,7 +80,7 @@ const projects = computed<Project[]>(() => [
   {
     name: 'jestin',
     title: 'Jestin',
-    description: t('A learning tool for process heavy jobs. Empower your employees with space repetition and active recall so they know what they have to do by heart.'),
+    description: t('A learning tool for process-heavy jobs. Empower your employees with spaced repetition and active recall so they know what they have to do by heart.'),
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -102,7 +102,7 @@ const projects = computed<Project[]>(() => [
   {
     name: 'ochess',
     title: 'oChess',
-    description: t('A chess app.'),
+    description: t('A chess game app.'),
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -124,7 +124,7 @@ const projects = computed<Project[]>(() => [
   {
     name: 'diamonds',
     title: 'Diamonds',
-    description: t('A mobile app to remind yourself your inspirations. Insert your quotes and mantras. Get one a day with an AI generated matching background.'),
+    description: t('A mobile app for daily inspiration. Get a quote/mantra with an AI-generated matching background each day. Insert your own custom quotes and mantras database.'),
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [

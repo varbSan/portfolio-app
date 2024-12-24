@@ -104,7 +104,7 @@ const faqItems: AccordionItem[] = [
   <section class="my-10 w-full justify-start px-4 text-white/60 antialiased lg:w-1/2">
     <AtPageSubTitle>
       <template #default>
-        Frequently Asked Questions
+        {{ t('Frequently Asked Questions') }}
       </template>
     </AtPageSubTitle>
     <MlAccordion
