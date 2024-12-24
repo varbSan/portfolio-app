@@ -170,13 +170,12 @@ const projects = computed<Project[]>(() => [
             >
           </a>
         </div>
-        <div class="grid grid-cols-10">
+        <div class="grid-flow-dense">
           <MlIconTech
             v-for="tech in project.techStack"
             v-bind="tech"
             :key="tech.name"
-            class=""
-            size="xs"
+            size="sm"
           />
         </div>
       </CardHeader>

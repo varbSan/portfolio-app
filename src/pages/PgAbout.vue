@@ -31,7 +31,7 @@ const currentTechStack = techStack.filter(tech => ([
     </AtPageSubTitle>
     <img
       src="@/assets/profile_picture.jpg"
-      class="col-span-3 sm:col-span-1 aspect-square w-full overflow-hidden rounded border border-white/80 object-cover"
+      class="col-span-3 aspect-square w-full overflow-hidden rounded border border-white/80 object-cover sm:col-span-1"
       alt="Avatar"
     >
     <p
@@ -43,12 +43,14 @@ const currentTechStack = techStack.filter(tech => ([
     <AtPageSubTitle>
       Tech Stack
     </AtPageSubTitle>
-    <MlIconTech
-      v-for="tech in currentTechStack"
-      v-bind="tech"
-      :key="tech.name"
-      class="flex w-full"
-    />
+    <div class="grid-flow-dense">
+      <MlIconTech
+        v-for="tech in currentTechStack"
+        v-bind="tech"
+        :key="tech.name"
+        class="flex w-full"
+      />
+    </div>
   </section>
   <section class="mt-6 grid w-full grid-cols-12 gap-4 px-6 text-white/60 antialiased md:w-2/3">
     <AtPageSubTitle class="col-span-12">
