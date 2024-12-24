@@ -25,7 +25,9 @@ const props = defineProps<{
       :key="item.value"
       :value="item.value"
     >
-      <AccordionTrigger>{{ item.title }}</AccordionTrigger>
+      <AccordionTrigger class="text-xs sm:text-sm">
+        {{ item.title }}
+      </AccordionTrigger>
       <AccordionContent>
         {{ item.content }}
       </AccordionContent>

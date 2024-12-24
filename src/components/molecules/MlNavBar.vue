@@ -33,7 +33,7 @@ function getIcon(routeName?: string) {
   <Tabs
     v-model="currentRouteName"
     :default-value="routes[0].name"
-    class="sticky flex w-64 justify-center"
+    class="sticky flex w-56 sm:w-64 justify-center"
   >
     <TabsList class="flex w-[90%] justify-between rounded-full border border-white/80 bg-zinc-950 transition-all duration-200 ease-in-out hover:w-full">
       <RouterLink
