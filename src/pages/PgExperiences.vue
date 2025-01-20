@@ -15,7 +15,7 @@ const experiences = computed<Experience[]>(() => [
     timeframe: '2022 - 2025',
     imageLink: 'https://cdn.prod.website-files.com/60e6f7d2de5acab2f159928a/64e7782b9edbd01439aef6d1_Management%20dashboard%20-%2020.svg',
     imageAlt: 'Codio Impact webapp admin dashboard',
-    description: t('Build the front and the backend a sustainability platform. Features: AI queries, Multiple Workspaces, Nested Datapoints (3 levels), Nested Projects, User Delegation, External data entry, Custom datatables.'),
+    description: t('Build the front and the backend of a sustainability platform. Features: AI queries, Multiple Workspaces, Nested Datapoints (3 levels), Nested Projects, User Delegation, External data entry, Custom datatables.'),
     techStack: ['typescript', 'tailwind', 'vuejs', 'vite', 'graphql', 'nestjs', 'mongodb', 'docker', 'vercel', 'render', 'github'],
   },
   {
