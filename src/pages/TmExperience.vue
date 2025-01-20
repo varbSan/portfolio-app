@@ -53,7 +53,7 @@ const experienceTechStack = computed(() => props.techStack
       :alt="props.imageAlt"
       class="h-96 w-full rounded-md object-cover object-left-top"
     >
-    <div class="grid-flow-dense">
+    <div class="flex flex-wrap gap-2 mt-2">
       <MlIconTech
         v-for="tech in experienceTechStack"
         v-bind="tech"

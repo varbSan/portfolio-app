@@ -12,15 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <TooltipProvider>
     <Tooltip>
-      <TooltipTrigger
-        class="transition-all duration-75 ease-in-out hover:rotate-6"
-        :class="{
-          'mr-1.5 mt-1.5': props.size === 'xs',
-          'mr-2 mt-2': props.size === 'sm',
-          'mr-4 mt-4': props.size === 'md',
-          'mr-5 mt-5': props.size === 'lg',
-        }"
-      >
+      <TooltipTrigger class="transition-all duration-75 ease-in-out hover:rotate-6">
         <Card class="bg-zinc relative grid w-fit place-items-center border-0 p-2">
           <div class="absolute inset-x-0 bottom-[--radius] top-0 rounded-t-[--radius] bg-gradient-to-b from-white/20 to-transparent" />
           <div class="absolute inset-x-[--radius] top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />

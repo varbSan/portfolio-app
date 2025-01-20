@@ -43,7 +43,7 @@ const currentTechStack = techStack.filter(tech => ([
     <AtPageSubTitle>
       Tech Stack
     </AtPageSubTitle>
-    <div class="grid-flow-dense">
+    <div class="flex flex-wrap gap-4 mt-4">
       <MlIconTech
         v-for="tech in currentTechStack"
         v-bind="tech"

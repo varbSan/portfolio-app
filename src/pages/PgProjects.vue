@@ -170,7 +170,7 @@ const projects = computed<Project[]>(() => [
             >
           </a>
         </div>
-        <div class="grid-flow-dense">
+        <div class="flex flex-wrap gap-2">
           <MlIconTech
             v-for="tech in project.techStack"
             v-bind="tech"
