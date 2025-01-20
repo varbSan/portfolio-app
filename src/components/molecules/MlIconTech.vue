@@ -33,12 +33,11 @@ const props = withDefaults(defineProps<Props>(), {
           >
             <component
               :is="props.icon"
-              class="w-full"
               :class="{
-                'h-4': props.size === 'xs',
-                'h-6': props.size === 'sm',
-                'h-12': props.size === 'md',
-                'h-14': props.size === 'lg',
+                'size-4': props.size === 'xs',
+                'size-6': props.size === 'sm',
+                'size-12': props.size === 'md',
+                'size-14': props.size === 'lg',
               }"
             />
           </a>

@@ -30,7 +30,7 @@ watch(locale, () => {
           </ToggleGroupItem>
         </ToggleGroup>
         <MlNavBar class="my-2" />
-        <div class="absolute right-0 top-0 mr-4 mt-4 flex gap-1">
+        <div class="absolute right-0 top-0 mr-4 mt-4 flex gap-1 bg-zinc-950 rounded">
           <a
             href="https://github.com/varbSan"
             target="_blank"
