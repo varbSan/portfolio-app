@@ -15,7 +15,7 @@ watch(locale, () => {
 </script>
 
 <template>
-  <div class="flex h-dvh flex-col">
+  <div class="flex h-dvh flex-col dark text-foreground">
     <main class="grid place-items-center">
       <div class="sticky top-0 z-20 flex w-full justify-center">
         <ToggleGroup v-model="locale" type="single" size="xs" class="absolute left-0 top-0 ml-4 mt-4 flex gap-1  text-xs text-white/50 bg-zinc-950 rounded-md">
