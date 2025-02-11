@@ -2,7 +2,7 @@
 import type { TechKey } from '@/lib/techStack'
 import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import MlIconTech from '@/components/molecules/MlIconTech.vue'
-import { techStack } from '@/lib/techStack'
+import { techStack as libTechStack } from '@/lib/techStack'
 import { computed } from 'vue'
 
 export type Experience = {
@@ -19,7 +19,7 @@ export type Experience = {
 const props = defineProps<Experience>()
 
 const experienceTechStack = computed(() => props.techStack
-  .map(techName => techStack.find(tech => tech.name === techName))
+  .map(techName => libTechStack.find(tech => tech.name === techName))
   .filter(tech => !!tech),
 )
 </script>

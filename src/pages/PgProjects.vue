@@ -23,7 +23,7 @@ type Project = {
 }
 const projects = computed<Project[]>(() => [
   {
-    key: 'queueberg',
+    name: 'queueberg',
     title: 'Queueberg',
     description: 'A nightclub queueing application.',
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
@@ -32,7 +32,6 @@ const projects = computed<Project[]>(() => [
         'typescript',
         'tailwind',
         'vuejs',
-        'pixijs',
         'vite',
         'graphql',
         'nestjs',
@@ -45,7 +44,7 @@ const projects = computed<Project[]>(() => [
     }),
   },
   // {
-  //   key: 'bobottle',
+  //   name: 'bobottle',
   //   title: 'Bobottle',
   //   description: 'An Uber like app for recycling. Give away your empty bottle. Help someone who will make money from it.',
   //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',

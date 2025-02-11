@@ -1,38 +1,30 @@
-import antfu from '@antfu/eslint-config'
-import tailwind from 'eslint-plugin-tailwindcss'
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import tseslint from "typescript-eslint";
+import pluginVue from "eslint-plugin-vue";
 
-async function getAntfuConfig() {
-  return antfu({
-    stylistic: {
-      quotes: 'single',
-      semi: false,
-    },
-    ignores: ['.vite'],
-    rules: {
-      'max-params': 2,
-      'ts/consistent-type-definitions': 'off',
-      'vue/max-len': ['warn', {
-        code: 135,
-        ignorePattern: 'class=', // Ignore lines with Tailwind classes
-        ignoreTemplateLiterals: true,
-        ignoreUrls: true,
-        ignoreHTMLTextContents: true,
-        ignoreStrings: true,
-        ignoreHTMLAttributeValues: true,
-      }],
-    },
-  })
-}
 
-const antfuConfig = await getAntfuConfig()
-
+/** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...antfuConfig,
-  ...tailwind.configs['flat/recommended'],
+  {files: ["src/**/*.{js,mjs,cjs,ts,vue}"]},
+  {languageOptions: { globals: globals.browser }},
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...pluginVue.configs["flat/essential"],
+  {files: ["**/*.vue"], languageOptions: {parserOptions: {parser: tseslint.parser}}},
+
   {
-    files: ['**/*.{vue,ts}'],
+    ignores: ["src/components/ui/**", "dist", "node_modules", ".vite"],
+  },
+
+  {
     rules: {
-      'tailwindcss/no-custom-classname': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_', // Ignore parameters that start with '_'
+        },
+      ],
     },
   },
-]
+];
