@@ -77,7 +77,7 @@ const faqItems: AccordionItem[] = [
     <Dialog>
       <DialogTrigger class="w-full">
         <AtButton
-          class="mb-2 w-full"
+          class="mb-2 w-full cursor-pointer"
           as="button"
           @click="showCalendly"
         >
