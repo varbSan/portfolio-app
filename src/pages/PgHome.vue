@@ -10,6 +10,7 @@ import DialogContent from '@/components/ui/dialog/DialogContent.vue'
 import DialogTrigger from '@/components/ui/dialog/DialogTrigger.vue'
 import { Calendar, MessageCircleMore } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
 const { t } = useI18n()
 
@@ -21,7 +22,7 @@ function showCalendly() {
   document.body.appendChild(script)
 }
 
-const faqItems: AccordionItem[] = [
+const faqItems = computed<AccordionItem[]>(() => [
   {
     value: 'faq-item-1',
     title: t('🚀 What service do you offer?'),
@@ -32,7 +33,7 @@ const faqItems: AccordionItem[] = [
   { value: 'faq-item-4', title: t('💳 How does payment work for a project?'), content: t('I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc.') },
   { value: 'faq-item-5', title: t('⏳ How long does a project take?'), content: t('It\'s difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.') },
   { value: 'faq-item-6', title: t('🏷️ Do you offer discounts?'), content: t('I offer a 10% discount for non-profit organizations.') },
-]
+])
 </script>
 
 <template>

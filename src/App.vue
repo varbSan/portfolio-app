@@ -22,10 +22,10 @@ watch(locale, () => {
           <!-- <ToggleGroupItem value="de" aria-label="Toggle german translation">
             DE
           </ToggleGroupItem> -->
-          <ToggleGroupItem value="en" aria-label="Toggle english translation" class="text-xs font-light">
+          <ToggleGroupItem value="en" aria-label="Toggle english translation" class="text-xs font-light cursor-pointer">
             EN
           </ToggleGroupItem>
-          <ToggleGroupItem value="fr" aria-label="Toggle french translation" class="text-xs font-light">
+          <ToggleGroupItem value="fr" aria-label="Toggle french translation" class="text-xs font-light cursor-pointer">
             FR
           </ToggleGroupItem>
         </ToggleGroup>

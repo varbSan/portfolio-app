@@ -44,7 +44,7 @@ function getIcon(routeName?: string) {
       >
         <TabsTrigger
           :value="route.name"
-          class="rounded-full transition-all duration-200 ease-in-out"
+          class="rounded-full transition-all duration-200 ease-in-out cursor-pointer"
         >
           <component
             :is="route.icon"

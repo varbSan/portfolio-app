@@ -35,7 +35,7 @@ const props = withDefaults(defineProps<Props>(), {
           </a>
         </Card>
       </TooltipTrigger>
-      <TooltipContent class="text-silver/90 border-silver/90 self-start border bg-zinc-950/80">
+      <TooltipContent class="text-white/80 border-white/80 self-start border bg-zinc-950/80">
         <h4 class="text-xl">
           {{ props.title }}
         </h4>
