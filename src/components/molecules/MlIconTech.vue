@@ -13,11 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
   <TooltipProvider>
     <Tooltip>
       <TooltipTrigger class="transition-all duration-75 ease-in-out hover:rotate-6">
-        <Card class="bg-zinc relative grid w-fit place-items-center border-0 p-2">
-          <div class="absolute inset-x-0 bottom-[--radius] top-0 rounded-t-[--radius] bg-gradient-to-b from-white/20 to-transparent" />
-          <div class="absolute inset-x-[--radius] top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
-          <div class="absolute inset-px rounded-[calc(var(--radius)-1px)] bg-zinc-950" />
-          <div class="absolute inset-0 bg-[radial-gradient(40%_128px_at_50%_0%,theme(backgroundColor.white/5%),transparent)]" />
+        <Card class="relative grid w-fit place-items-center border-0 p-2">
           <a
             class="z-10"
             :href="props.link"

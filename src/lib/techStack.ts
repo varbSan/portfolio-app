@@ -22,6 +22,9 @@ import AtIconVite from '@/components/atoms/icons/AtIconVite.vue'
 import AtIconVue from '@/components/atoms/icons/AtIconVue.vue'
 import AtIconWebAssembly from '@/components/atoms/icons/AtIconWebAssembly.vue'
 import AtIconWebpack from '@/components/atoms/icons/AtIconWebpack.vue'
+import AtIconHetzner from '@/components/atoms/icons/AtIconHetzner.vue'
+import AtIconCoolify from '@/components/atoms/icons/AtIconCoolify.vue'
+import AtIconMikroOrm from '@/components/atoms/icons/AtIconMikroOrm.vue'
 
 export const techList = {
   typescript: 'TypeScript',
@@ -38,14 +41,17 @@ export const techList = {
   nestjs: 'NestJS',
   actix: 'Actix',
   bevy: 'Bevy',
+  mikroorm: 'MikroORM',
   drizzle: 'Drizzle',
   postgresql: 'PostgreSQL',
   mongodb: 'MongoDB',
   docker: 'Docker',
   github: 'GitHub',
   vercel: 'Vercel',
+  coolify: 'Coolify',
   railway: 'Railway',
   render: 'Render',
+  hetzner: 'Hetzner',
   microsoftazure: 'Microsoft Azure',
 } as const
 
@@ -167,6 +173,13 @@ export const techStack: Tech[] = [
     icon: AtIconDrizzle,
   },
   {
+    name: 'mikroorm',
+    title: 'MikroORM',
+    description: 'TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns.',
+    link: 'https://mikro-orm.io/',
+    icon: AtIconMikroOrm,
+  },
+  {
     name: 'postgresql',
     title: 'PostgreSQL',
     description: 'PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.',
@@ -207,6 +220,20 @@ export const techStack: Tech[] = [
     description: 'Render is a modern cloud platform that provides developers with a way to deploy and manage applications, websites, and APIs. It automates the process of deploying code, handling scaling, and managing infrastructure.',
     link: 'https://render.com/',
     icon: AtIconRender,
+  },
+  {
+    name: 'coolify',
+    title: 'Coolify',
+    description: 'Coolify is a self-hosted, open-source platform for deploying and managing applications, similar to Heroku.',
+    link: 'https://coolify.io/',
+    icon: AtIconCoolify,
+  },
+  {
+    name: 'hetzner',
+    title: 'Hetzner',
+    description: 'Hetzner is a web hosting company offering cloud services, VPS, and dedicated servers at affordable prices.',
+    link: 'https://hetzner.com/',
+    icon: AtIconHetzner,
   },
   {
     name: 'microsoftazure',

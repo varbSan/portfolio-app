@@ -16,10 +16,11 @@ const currentTechStack = techStack.filter(tech => ([
   'vite',
   'graphql',
   'nestjs',
-  'drizzle',
+  'mikroorm',
   'postgresql',
+  'coolify',
+  'hetzner',
   'github',
-  'railway',
 ] as TechKey[]).includes(tech.name))
 </script>
 

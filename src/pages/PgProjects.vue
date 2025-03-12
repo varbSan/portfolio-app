@@ -23,9 +23,9 @@ type Project = {
 }
 const projects = computed<Project[]>(() => [
   {
-    name: 'queueberg',
-    title: 'Queueberg',
-    description: 'A nightclub queueing application.',
+    name: 'bergline',
+    title: 'Bergline',
+    description: t('A nightclub queueing application.'),
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -35,10 +35,11 @@ const projects = computed<Project[]>(() => [
         'vite',
         'graphql',
         'nestjs',
-        'drizzle',
+        'mikroorm',
         'postgresql',
         'github',
-        'railway',
+        'coolify',
+        'hetzner',
       ]
       return keys.includes(tech.name)
     }),
@@ -156,10 +157,11 @@ const projects = computed<Project[]>(() => [
         'vite',
         'graphql',
         'nestjs',
-        'drizzle',
+        'mikroorm',
         'postgresql',
         'github',
-        'railway',
+        'coolify',
+        'hetzner',
       ]
       return keys.includes(tech.name)
     }),
@@ -177,11 +179,6 @@ const projects = computed<Project[]>(() => [
     >
       <CardHeader class="antialiased">
         <CardTitle> {{ project.title }} </CardTitle>
-        <CardDescription>
-          <p class="text-sm text-white/60 antialiased">
-            {{ project.description }}
-          </p>
-        </CardDescription>
         <div class="mb-1 h-64 overflow-hidden rounded border border-white/80">
           <a href="https://example.com" target="_blank">
             <img
@@ -191,6 +188,13 @@ const projects = computed<Project[]>(() => [
             >
           </a>
         </div>
+
+        <CardDescription>
+          <p class="text-sm text-white/60 antialiased">
+            {{ project.description }}
+          </p>
+        </CardDescription>
+
         <div class="flex flex-wrap gap-2">
           <MlIconTech
             v-for="tech in project.techStack"

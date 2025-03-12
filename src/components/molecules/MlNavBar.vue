@@ -50,6 +50,9 @@ function getIcon(routeName?: string) {
             :is="route.icon"
             :size="24"
             class="hover:text-white"
+            :class="{
+              'text-white': route.name === currentRoute.name
+            }"
           />
         </TabsTrigger>
       </RouterLink>
