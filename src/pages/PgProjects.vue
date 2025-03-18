@@ -19,14 +19,16 @@ type Project = {
   title: string
   description: string
   imageSrc: string
+  link?:string
   techStack: Tech[]
 }
 const projects = computed<Project[]>(() => [
   {
     name: 'bergline',
     title: 'Bergline',
-    description: t('A nightclub queueing application.'),
-    imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
+    description: t('A nightclub queueing web application.'),
+    imageSrc: 'src/assets/bergline.jpg',
+    link: 'https://bergline.bakary.dev',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
@@ -44,110 +46,12 @@ const projects = computed<Project[]>(() => [
       return keys.includes(tech.name)
     }),
   },
-  // {
-  //   name: 'bobottle',
-  //   title: 'Bobottle',
-  //   description: 'An Uber like app for recycling. Give away your empty bottle. Help someone who will make money from it.',
-  //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-  //   techStack: techStack.filter((tech) => {
-  //     const keys: TechKey[] = [
-  //       'typescript',
-  //       'rust',
-  //       'tauri',
-  //       'tailwind',
-  //       'vuejs',
-  //       'vite',
-  //       'graphql',
-  //       'actix',
-  //       'postgresql',
-  //       'github',
-  //       'railway',
-  //     ]
-  //     return keys.includes(tech.name)
-  //   }),
-  // },
-  // {
-  //   name: 'tradecitizen',
-  //   title: 'Trade Citizen',
-  //   description: t('A live and minimal monitoring tool to follow the stock market.'),
-  //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-  //   techStack: techStack.filter(tech => ([
-  //     'typescript',
-  //     'rust',
-  //     'tauri',
-  //     'tailwind',
-  //     'vuejs',
-  //     'vite',
-  //     'github',
-  //   ] as TechKey[]).includes(tech.name)),
-  // },
-  // {
-  //   name: 'berghail',
-  //   title: 'Berghail',
-  //   description: t('A 2D game about the Girl, Techno, and G-heads.'),
-  //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-  //   techStack: techStack.filter((tech) => {
-  //     const keys: TechKey[] = [
-  //       'typescript',
-  //       'rust',
-  //       'bevy',
-  //       'webassembly',
-  //       'vite',
-  //       'vercel',
-  //       'github',
-  //     ]
-  //     return keys.includes(tech.name)
-  //   }),
-  // },
-  // {
-  //   name: 'jestin',
-  //   title: 'Jestin',
-  //   description: t('A learning tool for process-heavy jobs. Empower your employees with spaced repetition and active recall so they know what they have to do by heart.'),
-  //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-  //   techStack: techStack.filter((tech) => {
-  //     const keys: TechKey[] = [
-  //       'typescript',
-  //       'tauri',
-  //       'tailwind',
-  //       'vuejs',
-  //       'vite',
-  //       'graphql',
-  //       'nestjs',
-  //       'drizzle',
-  //       'postgresql',
-  //       'github',
-  //       'railway',
-  //     ]
-  //     return keys.includes(tech.name)
-  //   }),
-  // },
-  // {
-  //   name: 'ochess',
-  //   title: 'oChess',
-  //   description: t('A chess game app.'),
-  //   imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-  //   techStack: techStack.filter((tech) => {
-  //     const keys: TechKey[] = [
-  //       'typescript',
-  //       'tauri',
-  //       'tailwind',
-  //       'vuejs',
-  //       'vite',
-  //       'graphql',
-  //       'nestjs',
-  //       'drizzle',
-  //       'postgresql',
-  //       'github',
-  //       'railway',
-  //     ]
-  //     return keys.includes(tech.name)
-  //   }),
-  // },
   {
     name: 'diamonds',
     title: 'Diamonds',
-    description: t('A mobile app for daily inspiration. Get a quote/mantra with an AI-generated matching background each day. Insert your own custom quotes and mantras database.'),
+    description: t('A cross-platform app for daily inspiration. Get a quote/mantra with an AI-generated matching background each day. Insert your own custom quotes and mantras database.'),
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
+    link: 'https://example.com',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
@@ -180,7 +84,7 @@ const projects = computed<Project[]>(() => [
       <CardHeader class="antialiased">
         <CardTitle> {{ project.title }} </CardTitle>
         <div class="mb-1 h-64 overflow-hidden rounded border border-white/80">
-          <a href="https://example.com" target="_blank">
+          <a :href="project.link" target="_blank">
             <img
               :src="project.imageSrc"
               class="h-64 w-full overflow-hidden object-cover object-left-top transition-all duration-200 ease-in-out hover:scale-105"
