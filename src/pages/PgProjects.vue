@@ -27,7 +27,7 @@ const projects = computed<Project[]>(() => [
     name: 'bergline',
     title: 'Bergline',
     description: t('A nightclub queueing web application.'),
-    imageSrc: 'src/assets/bergline.jpg',
+    imageSrc: '../bergline.jpg',
     link: 'https://bergline.bakary.dev',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
