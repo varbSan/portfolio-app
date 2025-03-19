@@ -87,7 +87,7 @@ const projects = computed<Project[]>(() => [
           <a :href="project.link" target="_blank">
             <img
               :src="project.imageSrc"
-              class="h-64 w-full overflow-hidden object-cover object-left-top transition-all duration-200 ease-in-out hover:scale-105"
+              class="h-64 w-full overflow-hidden object-cover transition-all duration-200 ease-in-out hover:scale-105"
               alt="Project image"
             >
           </a>
