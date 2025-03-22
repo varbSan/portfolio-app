@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@nuxt/ui": "^3.0.1",
     "@radix-icons/vue": "^1.0.0",
     "@tailwindcss/postcss": "^4.0.6",
     "class-variance-authority": "^0.7.0",
