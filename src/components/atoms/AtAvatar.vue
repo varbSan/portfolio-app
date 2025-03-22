@@ -27,7 +27,6 @@ import { RouterLink } from 'vue-router'
   will-change: filter;
   transition: filter 300ms;
   position: relative;
-  z-index: 1;
 }
 
 .border-circle {

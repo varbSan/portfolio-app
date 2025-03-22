@@ -5,9 +5,6 @@ import AtButton from '@/components/atoms/AtButton.vue'
 import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
 import MlAccordion from '@/components/molecules/MlAccordion.vue'
-import Dialog from '@/components/ui/dialog/Dialog.vue'
-import DialogContent from '@/components/ui/dialog/DialogContent.vue'
-import DialogTrigger from '@/components/ui/dialog/DialogTrigger.vue'
 import { Calendar, MessageCircleMore } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
@@ -75,31 +72,31 @@ const faqItems = computed<AccordionItem[]>(() => [
       </div>
     </AtButton>
 
-    <Dialog>
-      <DialogTrigger class="w-full">
-        <AtButton
-          class="mb-2 w-full cursor-pointer"
-          as="button"
-          @click="showCalendly"
-        >
-          <div class="relative flex items-center justify-center gap-2 transition-all duration-200 ">
-            Let's meet
-            <Calendar
-              class="text-white/80"
-              aria-hidden="true"
-            />
-          </div>
-        </AtButton>
-      </DialogTrigger>
-      <DialogContent class="h-[calc(100%-150px)] w-1/2 overflow-hidden rounded bg-white p-0">
-        <!-- Calendly inline widget begin -->
-        <div
-          class="calendly-inline-widget size-full rounded"
-          data-url="https://calendly.com/var-bsan/30min"
-        />
-        <!-- Calendly inline widget end -->
-      </DialogContent>
-    </Dialog>
+    <UModal>
+      <AtButton
+        class="mb-2 w-full cursor-pointer"
+        as="button"
+        @click="showCalendly"
+      >
+        <div class="relative flex items-center justify-center gap-2 transition-all duration-200 ">
+          Let's meet
+          <Calendar
+            class="text-white/80"
+            aria-hidden="true"
+          />
+        </div>
+      </AtButton>
+      <template #content>
+        <Placeholder class="h-[calc(100dvh-150px)] overflow-hidden rounded bg-white p-0">
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget size-full rounded"
+            data-url="https://calendly.com/var-bsan/30min"
+          />
+          <!-- Calendly inline widget end -->
+        </Placeholder>
+      </template>
+    </UModal>
   </div>
 
   <section class="my-10 w-full justify-start px-4 text-white/60 antialiased lg:w-1/2">
