@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { Tech } from '@/lib/techStack'
-import { Card } from '@/components/ui/card'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-
+import { TooltipContent, TooltipProvider, TooltipRoot, TooltipTrigger } from 'reka-ui'
 type Props = Tech & { size?: 'xs' | 'sm' | 'md' | 'lg' }
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
@@ -11,9 +9,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <TooltipProvider>
-    <Tooltip>
+    <TooltipRoot class="">
       <TooltipTrigger class="transition-all duration-75 ease-in-out hover:rotate-6">
-        <Card class="relative grid w-fit place-items-center border-0 p-2">
+        <div class="relative grid w-fit place-items-center border-0 p-2">
           <a
             class="z-10"
             :href="props.link"
@@ -29,16 +27,22 @@ const props = withDefaults(defineProps<Props>(), {
               }"
             />
           </a>
-        </Card>
+        </div>
       </TooltipTrigger>
-      <TooltipContent class="text-white/80 border-white/80 self-start border bg-zinc-950/80">
+      <TooltipContent class="text-white/80 border-white/80 self-start border bg-zinc-950/80 rounded p-2">
         <h4 class="text-xl">
           {{ props.title }}
         </h4>
-        <p class="w-40">
+        <p 
+          class="w-40"
+          :class="{
+            'text-xs': props.size === 'xs' || props.size === 'sm',
+            'text-sm': props.size === 'md' || props.size === 'lg',
+          }"
+        >
           {{ props.description }}
         </p>
       </TooltipContent>
-    </Tooltip>
+    </TooltipRoot>
   </TooltipProvider>
 </template>
