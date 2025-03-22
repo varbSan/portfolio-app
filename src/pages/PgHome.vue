@@ -87,14 +87,14 @@ const faqItems = computed<AccordionItem[]>(() => [
         </div>
       </AtButton>
       <template #content>
-        <Placeholder class="h-[calc(100dvh-150px)] overflow-hidden rounded bg-white p-0">
+        <div class="h-[calc(100dvh-150px)] overflow-hidden rounded bg-white p-0">
           <!-- Calendly inline widget begin -->
           <div
             class="calendly-inline-widget size-full rounded"
             data-url="https://calendly.com/var-bsan/30min"
           />
           <!-- Calendly inline widget end -->
-        </Placeholder>
+        </div>
       </template>
     </UModal>
   </div>
