@@ -1,34 +1,34 @@
 <script setup lang="ts">
 import MlNavBar from '@/components/molecules/MlNavBar.vue'
-import { ref, watch } from 'vue'
+import { ToggleGroupRoot, ToggleGroupItem } from 'reka-ui'
+import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AtIconGithub from './components/atoms/icons/AtIconGithub.vue'
 import AtIconLinkedin from './components/atoms/icons/AtIconLinkedin.vue'
 
 const { t } = useI18n()
 const { locale } = useI18n({ useScope: 'global' })
-const localeItems = ref([
-  {
-    label: 'EN',
-    value: 'en'
-  },
-  {
-    label: 'FR',
-    value: 'fr'
-  }
-])
 locale.value = window.localStorage.getItem('bakarydev-locale') ?? 'en'
 watch(locale, () => {
   window.localStorage.setItem('bakarydev-locale', locale.value)
 })
-
 </script>
 
 <template>
   <UApp class="flex h-dvh flex-col dark text-foreground">
     <main class="grid place-items-center">
       <div class="sticky top-0 z-20 flex w-full justify-center">
-        <UTabs v-model="locale" size="xs" color="neutral" variant="pill" :content="false" :items="localeItems" class="absolute left-0 top-0 ml-4 mt-4 w-20" />
+        <ToggleGroupRoot v-model="locale" type="single" size="xs"
+          class="absolute left-0 top-0 ml-4 mt-4 flex gap-1  text-xs text-white/50 bg-zinc-950 rounded-md">
+          <ToggleGroupItem value="en" aria-label="Toggle english translation" class="text-xs font-light cursor-pointer"
+            :class="{ 'text-white': locale === 'en' }">
+            EN
+          </ToggleGroupItem>
+          <ToggleGroupItem value="fr" aria-label="Toggle french translation" class="text-xs font-light cursor-pointer"
+            :class="{ 'text-white': locale === 'fr' }">
+            FR
+          </ToggleGroupItem>
+        </ToggleGroupRoot>
         <MlNavBar class="my-2" />
         <div class="absolute right-0 top-0 mr-4 mt-4 flex gap-1 bg-zinc-950 rounded">
           <a href="https://github.com/varbSan" target="_blank" title="github">
