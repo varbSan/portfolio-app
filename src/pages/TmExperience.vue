@@ -5,7 +5,7 @@ import MlIconTech from '@/components/molecules/MlIconTech.vue'
 import { techStack as libTechStack } from '@/lib/techStack'
 import { computed } from 'vue'
 
-export type Experience = {
+export interface Experience {
   id: string
   title: string
   companyLink: string

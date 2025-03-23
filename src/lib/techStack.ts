@@ -1,12 +1,15 @@
 import type { Component } from 'vue'
 import AtIconActix from '@/components/atoms/icons/AtIconActix.vue'
 import AtIconBevy from '@/components/atoms/icons/AtIconBevy.vue'
+import AtIconCoolify from '@/components/atoms/icons/AtIconCoolify.vue'
 import AtIconCypress from '@/components/atoms/icons/AtIconCypress.vue'
 import AtIconDocker from '@/components/atoms/icons/AtIconDocker.vue'
 import AtIconDrizzle from '@/components/atoms/icons/AtIconDrizzle.vue'
 import AtIconGithub from '@/components/atoms/icons/AtIconGithub.vue'
 import AtIconGraphql from '@/components/atoms/icons/AtIconGraphql.vue'
+import AtIconHetzner from '@/components/atoms/icons/AtIconHetzner.vue'
 import AtIconMicrosoftAzure from '@/components/atoms/icons/AtIconMicrosoftAzure.vue'
+import AtIconMikroOrm from '@/components/atoms/icons/AtIconMikroOrm.vue'
 import AtIconMongodb from '@/components/atoms/icons/AtIconMongodb.vue'
 import AtIconNestjs from '@/components/atoms/icons/AtIconNestjs.vue'
 import AtIconPostgresql from '@/components/atoms/icons/AtIconPostgresql.vue'
@@ -22,9 +25,6 @@ import AtIconVite from '@/components/atoms/icons/AtIconVite.vue'
 import AtIconVue from '@/components/atoms/icons/AtIconVue.vue'
 import AtIconWebAssembly from '@/components/atoms/icons/AtIconWebAssembly.vue'
 import AtIconWebpack from '@/components/atoms/icons/AtIconWebpack.vue'
-import AtIconHetzner from '@/components/atoms/icons/AtIconHetzner.vue'
-import AtIconCoolify from '@/components/atoms/icons/AtIconCoolify.vue'
-import AtIconMikroOrm from '@/components/atoms/icons/AtIconMikroOrm.vue'
 
 export const techList = {
   typescript: 'TypeScript',
@@ -58,7 +58,7 @@ export const techList = {
 export type TechKey = keyof typeof techList
 type TechTitle = (typeof techList)[TechKey]
 
-export type Tech = {
+export interface Tech {
   name: TechKey
   title: TechTitle
   description: string

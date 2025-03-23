@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import type { TechKey } from '@/lib/techStack'
 import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
 import MlContacts from '@/components/molecules/MlContacts.vue'
 import MlIconTech from '@/components/molecules/MlIconTech.vue'
-import { type TechKey, techStack } from '@/lib/techStack'
+import { techStack } from '@/lib/techStack'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

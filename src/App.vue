@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MlNavBar from '@/components/molecules/MlNavBar.vue'
-import { ToggleGroupRoot, ToggleGroupItem } from 'reka-ui'
+import { ToggleGroupItem, ToggleGroupRoot } from 'reka-ui'
 import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AtIconGithub from './components/atoms/icons/AtIconGithub.vue'
@@ -18,14 +18,20 @@ watch(locale, () => {
   <UApp class="flex h-dvh flex-col dark text-foreground">
     <main class="grid place-items-center">
       <div class="sticky top-0 z-20 flex w-full justify-center">
-        <ToggleGroupRoot v-model="locale" type="single" size="xs"
-          class="absolute left-0 top-0 ml-4 mt-4 flex gap-1  text-xs text-white/50 bg-zinc-950 rounded-md">
-          <ToggleGroupItem value="en" aria-label="Toggle english translation" class="text-xs font-light cursor-pointer"
-            :class="{ 'text-white': locale === 'en' }">
+        <ToggleGroupRoot
+          v-model="locale" type="single" size="xs"
+          class="absolute left-0 top-0 ml-4 mt-4 flex gap-1  text-xs text-white/50 bg-zinc-950 rounded-md"
+        >
+          <ToggleGroupItem
+            value="en" aria-label="Toggle english translation" class="text-xs font-light cursor-pointer"
+            :class="{ 'text-white': locale === 'en' }"
+          >
             EN
           </ToggleGroupItem>
-          <ToggleGroupItem value="fr" aria-label="Toggle french translation" class="text-xs font-light cursor-pointer"
-            :class="{ 'text-white': locale === 'fr' }">
+          <ToggleGroupItem
+            value="fr" aria-label="Toggle french translation" class="text-xs font-light cursor-pointer"
+            :class="{ 'text-white': locale === 'fr' }"
+          >
             FR
           </ToggleGroupItem>
         </ToggleGroupRoot>
@@ -42,7 +48,8 @@ watch(locale, () => {
       <RouterView />
     </main>
     <footer
-      class="mx-auto mt-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-6 text-center text-sm text-white/30">
+      class="mx-auto mt-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-6 text-center text-sm text-white/30"
+    >
       © 2024, bakary.dev - {{ t('All rights reserved') }}.
     </footer>
   </UApp>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Tech } from '@/lib/techStack'
 import { TooltipContent, TooltipProvider, TooltipRoot, TooltipTrigger } from 'reka-ui'
+
 type Props = Tech & { size?: 'xs' | 'sm' | 'md' | 'lg' }
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
@@ -33,7 +34,7 @@ const props = withDefaults(defineProps<Props>(), {
         <h4 class="text-xl">
           {{ props.title }}
         </h4>
-        <p 
+        <p
           class="w-40"
           :class="{
             'text-xs': props.size === 'xs' || props.size === 'sm',

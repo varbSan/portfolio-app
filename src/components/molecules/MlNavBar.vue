@@ -51,7 +51,7 @@ function getIcon(routeName?: string) {
             :size="24"
             class="hover:text-white"
             :class="{
-              'text-white': route.name === currentRoute.name
+              'text-white': route.name === currentRoute.name,
             }"
           />
         </TabsTrigger>

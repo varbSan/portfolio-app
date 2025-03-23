@@ -1,10 +1,10 @@
-import './assets/main.css'
+import ui from '@nuxt/ui/vue-plugin'
 
 import { createApp } from 'vue'
 import App from './App.vue'
 import { i18n } from './lib/i18n'
 import { router } from './router'
-import ui from '@nuxt/ui/vue-plugin'
+import './assets/main.css'
 
 const app = createApp(App)
 

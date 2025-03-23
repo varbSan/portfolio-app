@@ -1,8 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
 import ui from '@nuxt/ui/vite'
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,9 +12,9 @@ export default defineConfig({
       ui: {
         colors: {
           primary: 'purple',
-          neutral: 'zinc'
-        }
-      }
+          neutral: 'zinc',
+        },
+      },
     }),
   ],
   resolve: {

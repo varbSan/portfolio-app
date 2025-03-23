@@ -14,12 +14,12 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-type Project = {
+interface Project {
   name: string
   title: string
   description: string
   imageSrc: string
-  link?:string
+  link?: string
   techStack: Tech[]
 }
 const projects = computed<Project[]>(() => [

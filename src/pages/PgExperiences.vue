@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import type { Experience } from './TmExperience.vue'
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import TmExperience, { type Experience } from './TmExperience.vue'
+import TmExperience from './TmExperience.vue'
 
 const { t } = useI18n()
 
