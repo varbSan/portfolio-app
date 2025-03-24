@@ -33,16 +33,14 @@ function getIcon(routeName?: string) {
     @update:model-value="router.push({ name: $event as string })"
   >
     <template #default="{ item }">
-      <div class="bg-zinc-950 rounded-full">
-        <component
-          :is="getIcon(item.value)"
-          :size="24"
-          class="cursor-pointer"
-          :class="{
-            'text-(--ui-primary)': item.value === currentRoute.name?.toString(),
-          }"
-        />
-      </div>
+      <component
+        :is="getIcon(item.value)"
+        :size="24"
+        class="cursor-pointer"
+        :class="{
+          'text-(--ui-primary)': item.value === currentRoute.name?.toString(),
+        }"
+      />
     </template>
   </UTabs>
 </template>
