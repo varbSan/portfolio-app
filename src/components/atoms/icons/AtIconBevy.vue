@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { defineComponent } from 'vue'
-
-defineComponent({
-  name: 'AtIconBevy',
-})
-</script>
-
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 256 256" class="scale-125">
     <g fill="none">

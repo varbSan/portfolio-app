@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { defineComponent } from 'vue'
-
-defineComponent({
-  name: 'AtIconMikroOrm',
-})
-</script>
-
 <template>
   <svg
     version="1.0"

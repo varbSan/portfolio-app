@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { defineComponent } from 'vue'
-
-defineComponent({
-  name: 'AtIconVercel',
-})
-</script>
-
 <template>
   <svg
     aria-label="Vercel Logo"

@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { defineComponent } from 'vue'
-
-defineComponent({
-  name: 'VscodeIconsFileTypeTypescriptOfficial',
-})
-</script>
-
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
