@@ -110,6 +110,7 @@ const faqItems = computed<AccordionItem[]>(() => [
     </AtPageSubTitle>
     <UAccordion
       :items="faqItems"
+      class="cursor-pointer"
       :default-value="faqItems[0].value"
     />
   </section>
