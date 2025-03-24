@@ -2,12 +2,6 @@
 import type { Tech, TechKey } from '@/lib/techStack'
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
 import MlIconTech from '@/components/molecules/MlIconTech.vue'
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
 import { techStack } from '@/lib/techStack'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -76,14 +70,16 @@ const projects = computed<Project[]>(() => [
 <template>
   <AtPageTitle />
   <section class="mt-6 grid w-full grid-cols-2 gap-4 px-6 md:w-4/5 lg:w-3/4 xl:w-2/3">
-    <Card
+    <UCard
       v-for="project in projects"
       :key="project.name"
-      class="col-span-2 flex size-full flex-col justify-between lg:col-span-1"
+      variant="subtle"
     >
-      <CardHeader class="antialiased">
-        <CardTitle> {{ project.title }} </CardTitle>
-        <div class="mb-1 h-64 overflow-hidden rounded border border-white/80">
+      <h4 class="font-bold">
+        {{ project.title }}
+      </h4>
+      <div class="antialiased">
+        <div class="mb-1 h-64 overflow-hidden rounded border border-white/50">
           <a :href="project.link" target="_blank">
             <img
               :src="project.imageSrc"
@@ -92,22 +88,18 @@ const projects = computed<Project[]>(() => [
             >
           </a>
         </div>
-
-        <CardDescription>
-          <p class="text-sm text-white/60 antialiased">
-            {{ project.description }}
-          </p>
-        </CardDescription>
-
-        <div class="flex flex-wrap gap-2">
-          <MlIconTech
-            v-for="tech in project.techStack"
-            v-bind="tech"
-            :key="tech.name"
-            size="sm"
-          />
-        </div>
-      </CardHeader>
-    </Card>
+        <p class="text-sm text-white/60 antialiased">
+          {{ project.description }}
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <MlIconTech
+          v-for="tech in project.techStack"
+          v-bind="tech"
+          :key="tech.name"
+          size="sm"
+        />
+      </div>
+    </UCard>
   </section>
 </template>

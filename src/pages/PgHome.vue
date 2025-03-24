@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { Item as AccordionItem } from '@/components/molecules/MlAccordion.vue'
+import type { AccordionItem } from '@nuxt/ui/runtime/components/Accordion.vue'
 import AtAvatar from '@/components/atoms/AtAvatar.vue'
-import AtButton from '@/components/atoms/AtButton.vue'
+import AtButtonShiny from '@/components/atoms/AtButtonShiny.vue'
 import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
-import MlAccordion from '@/components/molecules/MlAccordion.vue'
 import { Calendar, MessageCircleMore } from 'lucide-vue-next'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -22,14 +21,14 @@ function showCalendly() {
 const faqItems = computed<AccordionItem[]>(() => [
   {
     value: 'faq-item-1',
-    title: t('🚀 What service do you offer?'),
+    label: t('🚀 What service do you offer?'),
     content: t('I build your mobile/desktop/web application (e.g., startup product, company internal tool, personal app). Consulting and working on your existing project is also an option.'),
   },
-  { value: 'faq-item-2', title: t('💰 How much does a custom project cost?'), content: t('The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. Note that, I will only commit to your project if I evaluate its magnitude to 3750€ or higher.') },
-  { value: 'faq-item-3', title: t('💸 What is your daily rate?'), content: t('If you need me to work on an existing project of yours I usually charge 750€ per day.') },
-  { value: 'faq-item-4', title: t('💳 How does payment work for a project?'), content: t('I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc.') },
-  { value: 'faq-item-5', title: t('⏳ How long does a project take?'), content: t('It\'s difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.') },
-  { value: 'faq-item-6', title: t('🏷️ Do you offer discounts?'), content: t('I offer a 10% discount for non-profit organizations.') },
+  { value: 'faq-item-2', label: t('💰 How much does a custom project cost?'), content: t('The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. Note that, I will only commit to your project if I evaluate its magnitude to 3750€ or higher.') },
+  { value: 'faq-item-3', label: t('💸 What is your daily rate?'), content: t('If you need me to work on an existing project of yours I usually charge 750€ per day.') },
+  { value: 'faq-item-4', label: t('💳 How does payment work for a project?'), content: t('I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc.') },
+  { value: 'faq-item-5', label: t('⏳ How long does a project take?'), content: t('It\'s difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.') },
+  { value: 'faq-item-6', label: t('🏷️ Do you offer discounts?'), content: t('I offer a 10% discount for non-profit organizations.') },
 ])
 </script>
 
@@ -57,35 +56,41 @@ const faqItems = computed<AccordionItem[]>(() => [
   </div>
 
   <div class="mt-10 gap-2 lg:flex">
-    <AtButton
-      class="mb-2 w-full"
+    <UButton
+      class="mb-2 w-full px-8 cursor-pointer relative overflow-hidden group"
+      variant="outline"
+      color="neutral"
       as="a"
-      href="https://www.linkedin.com/in/bakary-sanou-61027b66/"
+      trailing-icon="i-lucide-message-circle-more"
+      to="https://www.linkedin.com/in/bakary-sanou-61027b66/"
       target="_blank"
     >
-      <div class="relative flex items-center justify-center gap-2 transition-all duration-200">
-        Let's chat
-        <MessageCircleMore
-          class="text-white/80"
-          aria-hidden="true"
-        />
-      </div>
-    </AtButton>
+      <span class="whitespace-nowrap">
+        {{ t("Let's chat") }}
+      </span>
+      <!-- Shiny Effect -->
+      <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <span class="absolute inset-0 w-[150%] h-full bg-white/40 transform rotate-12 translate-x-[-150%] group-hover:translate-x-[150%] transition-transform duration-700 ease-out" />
+      </span>
+    </UButton>
 
     <UModal>
-      <AtButton
-        class="mb-2 w-full cursor-pointer"
+      <UButton
+        variant="outline"
+        trailing-icon="i-lucide-calendar"
+        color="neutral"
+        class="mb-2 w-full cursor-pointer px-8 relative overflow-hidden group"
         as="button"
         @click="showCalendly"
       >
-        <div class="relative flex items-center justify-center gap-2 transition-all duration-200 ">
-          Let's meet
-          <Calendar
-            class="text-white/80"
-            aria-hidden="true"
-          />
-        </div>
-      </AtButton>
+        <span class="whitespace-nowrap relative flex items-center justify-center gap-2 transition-all duration-200 ">
+          {{ t("Let's meet") }}
+        </span>
+        <!-- Shiny Effect -->
+        <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="absolute inset-0 w-[150%] h-full bg-white/40 transform rotate-12 translate-x-[-150%] group-hover:translate-x-[150%] transition-transform duration-700 ease-out" />
+        </span>
+      </UButton>
       <template #content>
         <div class="h-[calc(100dvh-150px)] overflow-hidden rounded bg-white p-0">
           <!-- Calendly inline widget begin -->
@@ -105,7 +110,7 @@ const faqItems = computed<AccordionItem[]>(() => [
         {{ t('Frequently Asked Questions') }}
       </template>
     </AtPageSubTitle>
-    <MlAccordion
+    <UAccordion
       :items="faqItems"
       :default-value="faqItems[0].value"
     />
