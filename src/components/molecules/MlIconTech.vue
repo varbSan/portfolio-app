@@ -10,11 +10,10 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <TooltipProvider>
-    <TooltipRoot class="">
+    <TooltipRoot>
       <TooltipTrigger class="transition-all duration-75 ease-in-out hover:rotate-6">
         <div class="relative grid w-fit place-items-center border-0 p-2">
           <a
-            class="z-10"
             :href="props.link"
             target="_blank"
           >
