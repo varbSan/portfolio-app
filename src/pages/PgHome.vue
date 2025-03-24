@@ -55,7 +55,7 @@ const faqItems = computed<AccordionItem[]>(() => [
 
   <div class="mt-10 gap-2 lg:flex">
     <UButton
-      class="mb-2 w-full px-8 cursor-pointer relative overflow-hidden group"
+      class="mb-2 w-full px-8 cursor-pointer relative overflow-hidden group justify-center"
       variant="outline"
       color="neutral"
       as="a"
@@ -77,7 +77,7 @@ const faqItems = computed<AccordionItem[]>(() => [
         variant="outline"
         trailing-icon="i-lucide-calendar"
         color="neutral"
-        class="mb-2 w-full cursor-pointer px-8 relative overflow-hidden group"
+        class="mb-2 w-full cursor-pointer px-8 relative overflow-hidden group justify-center"
         as="button"
         @click="showCalendly"
       >
