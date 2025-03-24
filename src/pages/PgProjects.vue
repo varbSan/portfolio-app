@@ -74,6 +74,7 @@ const projects = computed<Project[]>(() => [
       v-for="project in projects"
       :key="project.name"
       variant="subtle"
+      class="col-span-2 lg:col-span-1"
     >
       <h4 class="font-bold">
         {{ project.title }}
