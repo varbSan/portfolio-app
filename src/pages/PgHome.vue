@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import type { AccordionItem } from '@nuxt/ui/runtime/components/Accordion.vue'
 import AtAvatar from '@/components/atoms/AtAvatar.vue'
-import AtButtonShiny from '@/components/atoms/AtButtonShiny.vue'
 import AtPageSubTitle from '@/components/atoms/AtPageSubTitle.vue'
 import AtPageTitle from '@/components/atoms/AtPageTitle.vue'
-import { Calendar, MessageCircleMore } from 'lucide-vue-next'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
