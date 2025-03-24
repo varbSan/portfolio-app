@@ -20,7 +20,7 @@ watch(locale, () => {
       <div class="sticky top-0 z-20 flex w-full justify-center bg-black">
         <ToggleGroupRoot
           v-model="locale" type="single" size="xs"
-          class="absolute left-0 top-0 ml-4 mt-4 flex gap-1  text-xs text-white/50 bg-zinc-950 rounded-md"
+          class="absolute left-0 top-0 ml-6 mt-5.5 flex gap-1  text-xs text-white/50 bg-black rounded-md"
         >
           <ToggleGroupItem
             value="en" aria-label="Toggle english translation" class="text-xs font-light cursor-pointer"
@@ -36,7 +36,7 @@ watch(locale, () => {
           </ToggleGroupItem>
         </ToggleGroupRoot>
         <MlNavBar class="my-2" />
-        <div class="absolute right-0 top-0 mr-4 mt-4 flex gap-1 bg-zinc-950 rounded">
+        <div class="absolute right-0 top-0 mr-6 mt-4.5 flex gap-1 bg-zinc-950 rounded">
           <a href="https://github.com/varbSan" target="_blank" title="github">
             <AtIconGithub class="size-6 cursor-pointer text-white/50 hover:text-white/80" />
           </a>
