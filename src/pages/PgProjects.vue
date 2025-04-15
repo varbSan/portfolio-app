@@ -41,11 +41,11 @@ const projects = computed<Project[]>(() => [
     }),
   },
   {
-    name: 'diamonds',
-    title: 'Diamonds',
+    name: 'quote-record',
+    title: 'Quote Record',
     description: t('A cross-platform app for daily inspiration. Get a quote/mantra with an AI-generated matching background each day. Insert your own custom quotes and mantras database.'),
     imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
-    link: 'https://diamonds.bakary.dev',
+    link: 'https://quote-record.bakary.dev',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
