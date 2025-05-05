@@ -44,7 +44,7 @@ const projects = computed<Project[]>(() => [
     name: 'quote-record',
     title: 'Quote Record',
     description: t('A cross-platform app for daily inspiration. Get a quote with an AI-generated matching background each day. Insert your own custom quotes database.'),
-    imageSrc: 'https://as1.ftcdn.net/v2/jpg/02/33/17/50/1000_F_233175040_hwqRyiZlQkXimeLz2AIZhajyfiU9El1m.jpg',
+    imageSrc: '../quote-record.jpg',
     link: 'https://quote-record.bakary.dev',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
@@ -84,7 +84,7 @@ const projects = computed<Project[]>(() => [
           <a :href="project.link" target="_blank">
             <img
               :src="project.imageSrc"
-              class="h-64 w-full overflow-hidden object-cover transition-all duration-200 ease-in-out hover:scale-105"
+              class="h-64 w-full overflow-hidden transition-all duration-200 ease-in-out hover:scale-105"
               alt="Project image"
             >
           </a>
