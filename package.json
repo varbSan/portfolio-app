@@ -13,9 +13,9 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/ui": "^3.0.1",
+    "@nuxt/ui": "^3.1.1",
     "lucide-vue-next": "^0.460.0",
-    "reka-ui": "^2.1.1",
+    "reka-ui": "^2.2.1",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.2",
     "vue-router": "^4.5.0"
