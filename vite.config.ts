@@ -12,6 +12,7 @@ export default defineConfig({
     vueDevTools(),
     ui({
       ui: {
+        colorMode: false,
         colors: {
           primary: 'white',
           neutral: 'zinc',
