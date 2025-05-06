@@ -15,8 +15,8 @@ watch(locale, () => {
 </script>
 
 <template>
-  <UApp class="flex h-dvh flex-col dark text-foreground">
-    <main class="grid place-items-center">
+  <UApp class="flex h-dvh flex-col">
+    <main class="grid place-items-center dark text-foreground">
       <div class="sticky top-0 z-20 flex w-full justify-center bg-black">
         <ToggleGroupRoot
           v-model="locale" type="single" size="xs"
@@ -48,9 +48,9 @@ watch(locale, () => {
       <RouterView />
     </main>
     <footer
-      class="mx-auto mt-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-6 text-center text-sm text-white/30"
+      class="dark mx-auto mt-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-6 text-center text-sm text-white/30"
     >
-      © 2024, bakary.dev - {{ t('All rights reserved') }}.
+      © 2025, bakary.dev - {{ t('All rights reserved') }}.
     </footer>
   </UApp>
 </template>

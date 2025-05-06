@@ -76,7 +76,7 @@ const projects = computed<Project[]>(() => [
       variant="subtle"
       class="col-span-2 lg:col-span-1"
     >
-      <h4 class="font-bold">
+      <h4 class="font-bold text-white/80">
         {{ project.title }}
       </h4>
       <div class="antialiased">

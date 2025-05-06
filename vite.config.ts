@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import ui from '@nuxt/ui/vite'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
@@ -12,7 +11,6 @@ export default defineConfig({
     vueDevTools(),
     ui({
       ui: {
-        colorMode: false,
         colors: {
           primary: 'white',
           neutral: 'zinc',

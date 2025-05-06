@@ -38,7 +38,7 @@ function getIcon(routeName?: string) {
         :size="24"
         class="cursor-pointer"
         :class="{
-          'text-(--ui-primary)': item.value === currentRoute.name?.toString(),
+          'text-white': item.value === currentRoute.name?.toString(),
         }"
       />
     </template>
