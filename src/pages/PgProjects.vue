@@ -14,6 +14,8 @@ interface Project {
   description: string
   imageSrc: string
   link?: string
+  frontendCodeLink?: string
+  backendCodeLink?: string
   techStack: Tech[]
 }
 const projects = computed<Project[]>(() => [
@@ -23,6 +25,8 @@ const projects = computed<Project[]>(() => [
     description: t('A nightclub queueing web application.'),
     imageSrc: '../bergline.jpg',
     link: 'https://bergline.bakary.dev',
+    frontendCodeLink: 'https://github.com/varbSan/berline-client',
+    backendCodeLink: 'https://github.com/varbSan/berline-server',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
@@ -46,6 +50,8 @@ const projects = computed<Project[]>(() => [
     description: t('A cross-platform app (web and macOS) that converts quotes into inspiring images.'),
     imageSrc: '../quote-record.jpg',
     link: 'https://quote-record.bakary.dev',
+    frontendCodeLink: 'https://github.com/varbSan/quote-record-client',
+    backendCodeLink: 'https://github.com/varbSan/quote-record-server',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
@@ -76,8 +82,47 @@ const projects = computed<Project[]>(() => [
       variant="subtle"
       class="col-span-2 lg:col-span-1"
     >
-      <h4 class="font-bold text-white/80">
-        {{ project.title }}
+      <h4 class="flex mb-1 align-bottom">
+        <ULink
+          class="text-white/70 font-bold"
+          :to="project.link"
+          target="_blank"
+        >
+          {{ project.title }}
+        </ULink>
+        <UButtonGroup class="ml-auto" size="xs">
+          <UButton icon="i-lucide-code" color="neutral" variant="outline" label="Code" />
+
+          <UDropdownMenu
+            size="xs"
+            :ui="{
+              content: 'min-w-20 bg-zinc-950/80 ring-white/50',
+              group: 'p-1.5 outline-none border-0',
+              itemLabel: 'text-white/80',
+              item: '!bg-zinc-950/80',
+            }"
+            :items="[
+              {
+                label: 'Frontend',
+                target: '_blank',
+                to: project.frontendCodeLink,
+              },
+              {
+                label: 'Backend',
+                target: '_blank',
+                to: project.backendCodeLink,
+              },
+            ]"
+          >
+            <UButton
+              size="xs"
+              color="neutral"
+              variant="outline"
+              icon="i-lucide-chevron-down"
+              class="cursor-pointer"
+            />
+          </UDropdownMenu>
+        </UButtonGroup>
       </h4>
       <div class="antialiased">
         <div class="mb-1 h-64 overflow-hidden rounded border border-white/50">
