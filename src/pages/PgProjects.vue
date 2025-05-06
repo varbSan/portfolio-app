@@ -43,7 +43,7 @@ const projects = computed<Project[]>(() => [
   {
     name: 'quote-record',
     title: 'Quote Record',
-    description: t('A cross-platform app for daily inspiration. Get a quote with an AI-generated matching background each day. Insert your own custom quotes database.'),
+    description: t('A cross-platform app (web and macOS) that converts quotes into inspiring images.'),
     imageSrc: '../quote-record.jpg',
     link: 'https://quote-record.bakary.dev',
     techStack: techStack.filter((tech) => {
