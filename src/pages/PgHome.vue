@@ -72,7 +72,7 @@ const faqItems = computed<AccordionItem[]>(() => [
       </span>
     </UButton>
 
-    <UModal>
+    <UModal :overlay="false">
       <UButton
         variant="outline"
         trailing-icon="i-lucide-calendar"
