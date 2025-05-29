@@ -20,16 +20,17 @@ interface Project {
 }
 const projects = computed<Project[]>(() => [
   {
-    name: 'bergline',
-    title: 'Bergline',
-    description: t('A nightclub queueing web application.'),
-    imageSrc: '../bergline.jpg',
-    link: 'https://bergline.bakary.dev',
-    frontendCodeLink: 'https://github.com/varbSan/berline-client',
-    backendCodeLink: 'https://github.com/varbSan/berline-server',
+    name: 'quote-record',
+    title: 'Quote Record',
+    description: t('A cross-platform app (web and macOS) that converts quotes into inspiring images.'),
+    imageSrc: '../quote-record.jpg',
+    link: 'https://quote-record.bakary.dev/signin',
+    frontendCodeLink: 'https://github.com/varbSan/quote-record-client',
+    backendCodeLink: 'https://github.com/varbSan/quote-record-server',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
+        'tauri',
         'tailwind',
         'vuejs',
         'vite',
@@ -45,17 +46,16 @@ const projects = computed<Project[]>(() => [
     }),
   },
   {
-    name: 'quote-record',
-    title: 'Quote Record',
-    description: t('A cross-platform app (web and macOS) that converts quotes into inspiring images.'),
-    imageSrc: '../quote-record.jpg',
-    link: 'https://quote-record.bakary.dev',
-    frontendCodeLink: 'https://github.com/varbSan/quote-record-client',
-    backendCodeLink: 'https://github.com/varbSan/quote-record-server',
+    name: 'berline',
+    title: 'Berline',
+    description: t('A nightclub queueing web application.'),
+    imageSrc: '../bergline.jpg',
+    link: 'https://berline.bakary.dev',
+    frontendCodeLink: 'https://github.com/varbSan/berline-client',
+    backendCodeLink: 'https://github.com/varbSan/berline-server',
     techStack: techStack.filter((tech) => {
       const keys: TechKey[] = [
         'typescript',
-        'tauri',
         'tailwind',
         'vuejs',
         'vite',
