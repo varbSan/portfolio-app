@@ -45,31 +45,6 @@ const projects = computed<Project[]>(() => [
       return keys.includes(tech.name)
     }),
   },
-  {
-    name: 'berline',
-    title: 'Berline',
-    description: t('A nightclub queueing web application.'),
-    imageSrc: '../bergline.jpg',
-    link: 'https://berline.bakary.dev',
-    frontendCodeLink: 'https://github.com/varbSan/berline-client',
-    backendCodeLink: 'https://github.com/varbSan/berline-server',
-    techStack: techStack.filter((tech) => {
-      const keys: TechKey[] = [
-        'typescript',
-        'tailwind',
-        'vuejs',
-        'vite',
-        'graphql',
-        'nestjs',
-        'mikroorm',
-        'postgresql',
-        'github',
-        'coolify',
-        'hetzner',
-      ]
-      return keys.includes(tech.name)
-    }),
-  },
 ])
 </script>
 
