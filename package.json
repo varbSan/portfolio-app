@@ -20,6 +20,10 @@
     "vue-i18n": "^11.1.10",
     "vue-router": "^4.5.0"
   },
+    "optionalDependencies": {
+    "@rollup/rollup-linux-arm64-gnu": "^4.50.1",
+    "@tailwindcss/oxide-linux-arm64-gnu": "^4.1.13"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",
     "@tsconfig/node22": "^22.0.0",
