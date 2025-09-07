@@ -24,7 +24,7 @@ const projects = computed<Project[]>(() => [
     title: 'Quote Record',
     description: t('A cross-platform app (web and macOS) that converts quotes into inspiring images.'),
     imageSrc: '../quote-record.jpg',
-    link: 'https://quote-record.bakary.dev/signin',
+    link: 'https://quote-record.bakary.dev/sign-in',
     frontendCodeLink: 'https://github.com/varbSan/quote-record-client',
     backendCodeLink: 'https://github.com/varbSan/quote-record-server',
     techStack: techStack.filter((tech) => {
